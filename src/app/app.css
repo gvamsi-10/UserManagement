@@ -1,0 +1,91 @@
+
+
+
+.header{
+    border: 2px solid rgb(181, 168, 168);
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 50%;
+    margin: 1rem auto;
+    background-color: rgb(93, 130, 223);
+    color: white
+    
+}
+
+.adbtn{
+    padding: 0.5rem;
+    background-color: rgb(62, 191, 62);
+    border: none;
+    color: white;
+    border-radius: 0.3rem;
+}
+.adbtn:hover{
+    background-color: rgb(132, 237, 132);
+    color: black;
+}
+
+.edbtn{
+    padding: 0.5rem;
+    background-color: rgb(101, 123, 231);
+    border: none;
+    color: white;
+    border-radius: 0.3rem;
+}
+
+.edbtn:hover{
+    background-color: rgb(157, 173, 249);
+    color: black;
+}
+
+.dbtn{
+    padding: 0.5rem;
+    background-color: rgb(232, 58, 58);
+    border: none;
+    color: white;
+    border-radius: 0.3rem;
+}
+.dbtn:hover{
+    background-color: rgb(255, 138, 138);
+    color: black;
+}
+
+/* ##################CENTERR A DIV#####################3 */
+
+table{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tbody{
+    text-align: center;
+}
+
+.user-form{
+    
+    width: 50%;
+    background-color: rgb(93, 130, 223);
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.lable{
+    display: block;
+}
+
+input{
+    display: block;
+    width: 50%;
+    
+    margin: 0.2rem;
+}
+
+.userform{
+    margin-left: 25%;
+}
+
+.formbtn{
+    margin: 0.5rem 2rem;
+}

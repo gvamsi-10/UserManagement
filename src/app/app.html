@@ -1,0 +1,70 @@
+<div class="body" *ngIf="users; else err">
+
+  <div class="header">
+    <h2>Manage Users</h2>
+    <button (click)="addUser()" class="btn adbtn">Add User</button>
+  </div>
+
+  <table *ngIf="users.length">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user['name']}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.city}}</td>
+        <td><button (click)="addUser(user)" class="btn edbtn">Edit</button></td>
+        <td><button (click)="deleteUser(user.id)" class="btn dbtn">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="user-form" *ngIf="displayuserform">
+    <h2 style="margin-left: 38%; padding-top: 1rem;">{{formheader}}</h2>
+    <form class="userform">
+      <div class="inputGroup">
+      <label class="lable" id="un" for="username">user name</label>
+      <input type="text" [(ngModel)]="username" name="un">
+      </div>
+      <div class="inputGroup">
+        <label class="lable" id="uc">user city</label>
+        <input type="text" [(ngModel)]="usercity" name="uc">
+      </div>
+      <div class="inputGroup">
+        <label class="lable" id="ua">user age</label>
+        <input type="number" [(ngModel)]="userage" name="ua">
+      </div>
+      <div class="inputGroup">
+        <button class="formbtn save adbtn" (click)="saveUser()">save changes</button>
+        <button class="formbtn cancel dbtn"(click)="closeform()">Cancell</button>
+      </div>
+      
+    </form>
+  </div>
+
+  <!-- <div class="user-form" *ngIf="edituserform">
+    <form >
+      <label id="un">user name</label>
+      <input type="text" [(ngModel)]="username" name="un">
+      <br>
+      <label id="un">user city</label>
+      <input type="text" [(ngModel)]="usercity" name="uc">
+      <br>
+      <label id="un">user age</label>
+      <input type="number" [(ngModel)]="userage" name="ua">
+      <br>
+      <button (click)="editUser()">submit</button>
+    </form>
+  </div> -->
+
+</div>
+
+
+<ng-template #err>
+<p style="color: red;">There is some error in getting some data</p>
+</ng-template>
